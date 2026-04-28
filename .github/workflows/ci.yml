@@ -54,3 +54,13 @@ jobs:
         with:
           name: coverage-xml
           path: coverage.xml
+
+      - name: Upload coverage to Codecov (Linux + 3.12 only)
+        if: matrix.os == 'ubuntu-latest' && matrix.python == '3.12'
+        uses: codecov/codecov-action@v5
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          files: coverage.xml
+          flags: unittests
+          name: agno-dcp-coverage
+          fail_ci_if_error: false
