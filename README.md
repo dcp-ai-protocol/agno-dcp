@@ -20,6 +20,14 @@ If DCP-AI is not active, the agent runs identically to a plain Agno agent.
 
 ---
 
+## See it running
+
+A working banking-grade demo of every capability above is hosted at **[agno-dcp-demo.fly.dev](https://agno-dcp-demo.fly.dev)**: a collections agent that looks up customers, proposes payment plans, and dispatches confirmations, with every action gated by a YAML policy and sealed in a hash-chained audit log. Click "Verify chain integrity" to run the offline verifier in your browser; click "Export bundle" to download a signed Compliance ZIP.
+
+Source for the demo (FastAPI + HTMX + SQLite, deployable to Fly.io with one command) is at [`dcp-ai-protocol/agno-dcp-demo`](https://github.com/dcp-ai-protocol/agno-dcp-demo).
+
+---
+
 ## Why agno-dcp
 
 Agno gives you the runtime. `agno-dcp` gives you the paper trail regulated buyers ask for before signing.
